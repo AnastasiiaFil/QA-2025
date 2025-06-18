@@ -1,0 +1,425 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+/* Define root CSS variables for color and shadow reuse */
+:root {
+  --green: #3a725b;
+  --green-dark: #2e5948;
+  --bg-light: #f5f5f5;
+  --text: #333;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make the document take full height */
+html,
+body {
+  height: 100%;
+}
+
+/* Global body styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles with gradient background and spacing */
+header {
+  background: linear-gradient(to right, var(--green), #559e7c);
+  color: white;
+  padding: 1.2em 2em;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo/title in the header */
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Navigation links layout */
+nav {
+  display: flex;
+  gap: 1.5em;
+}
+
+/* Nav link styles */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on nav links */
+nav a:hover {
+  color: #e0ffef;
+}
+
+/* Burger icon for mobile menu - hidden by default */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Each line in the burger icon */
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Mobile navigation menu - hidden by default */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 2em;
+  background-color: var(--green);
+  padding: 1em;
+  border-radius: 0 0 8px 8px;
+  z-index: 10;
+}
+
+/* Show mobile menu when open class is applied */
+.mobile-nav.open {
+  display: flex;
+}
+
+/* Style for mobile menu links */
+.mobile-nav a {
+  margin: 0.5em 0;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+/* Main content area */
+main {
+  padding: 2em;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  flex: 1 0 auto;
+}
+
+/* Layout for pages with single sections (e.g. contact) */
+.main-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default display for gallery and facts pages */
+.main-gallery,
+.main-facts {
+  display: block;
+}
+
+/* Responsive grid layout for gallery images */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  padding: 2em 0;
+}
+
+/* Gallery card styles */
+.gallery-grid figure {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Image inside gallery figure */
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Magnifying glass icon overlay on hover */
+.gallery-grid figure::after {
+  content: "\1F50D"; /* Unicode magnifying glass */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Zoom and darken image on hover */
+.gallery-grid figure:hover img {
+  transform: scale(1.05);
+  filter: brightness(60%);
+}
+
+/* Show magnifying glass icon on hover */
+.gallery-grid figure:hover::after {
+  opacity: 1;
+}
+
+/* Base block section styles */
+section,
+article,
+aside {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2em;
+  background: white;
+  padding: 3em;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+/* Slight elevation effect on hover */
+section:hover,
+article:hover,
+aside:hover {
+  transform: translateY(-4px);
+}
+
+/* List styling */
+ul {
+  padding-left: 1.5em;
+}
+
+/* Table styling for facts page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background-color: #fff;
+}
+
+th {
+  background-color: #ebf6f2;
+}
+
+/* Center image captions */
+figure {
+  text-align: center;
+}
+
+/* Responsive iframe (video, map) */
+iframe {
+  display: block;
+  margin: 2em auto;
+  max-width: 100%;
+}
+
+/* Contact form layout */
+form {
+  display: grid;
+  gap: 1em;
+}
+
+/* Input field styling */
+input,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state for submit button */
+input[type="submit"]:hover {
+  background-color: var(--green-dark);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: var(--green);
+  color: white;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Default image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Overrides for gallery wrapper */
+section.gallery-grid {
+  max-width: 100%;
+  padding: 2em 1em;
+  background: none;
+  box-shadow: none;
+}
+
+/* Modal styles (used for image preview) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Fullscreen image inside modal */
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px black;
+}
+
+/* Close button in modal */
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Caption for modal image */
+#modal-caption {
+  margin-top: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Animate burger icon transformation */
+.burger div {
+  transition: all 0.3s ease;
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hover underline effect for navigation links */
+nav a,
+.mobile-nav a {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+nav a::after,
+.mobile-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+.mobile-nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover,
+.mobile-nav a:hover {
+  color: #e0ffef;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  section,
+  article,
+  aside {
+    padding: 1.5em;
+  }
+}

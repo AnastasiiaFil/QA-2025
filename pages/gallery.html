@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Capybara Nursery</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- External CSS stylesheet -->
+</head>
+
+<body>
+
+    <header>
+        <div class="header-title">Capybara Haven</div>
+
+        <!-- Desktop navigation -->
+        <nav>
+            <a href="../index.html">Main page</a>
+            <span>&nbsp;</span>
+            <a href="about.html">Capybara Facts</a>
+            <span>&nbsp;</span>
+            <a href="contact.html">Contacts</a>
+        </nav>
+
+        <!-- Burger icon for mobile view -->
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div class="mobile-nav">
+            <a href="../index.html">Main</a>
+            <a href="./about.html">Capybara Facts</a>
+            <a href="./contact.html">Contacts</a>
+        </div>
+    </header>
+
+    <!-- Main content section for the gallery -->
+    <main class="main-gallery">
+        <!-- Responsive image gallery using CSS Grid -->
+        <section class="gallery-grid">
+            <figure>
+                <img src="../photo/capybara-2.jpg" alt="Mother capybara with her babies" />
+                <figcaption>Mother capybara with her babies</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-4.jpg" alt="Group of capybaras by the nursery" />
+                <figcaption>Group of capybaras by the nursery</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-3.jpeg" alt="Caretaker feeding a capybara" />
+                <figcaption>Caretaker feeding a capybara</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-1.jpg" alt="Capybara Portrait Photo" />
+                <figcaption>Capybara Portrait Photo</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-5.jpg" alt="Capybaras & Water" />
+                <figcaption>Capybaras & Water</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-6.jpeg" alt="Capybara Pair" />
+                <figcaption>Capybara Pair</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-7.jpg" alt="Capybara Chill" />
+                <figcaption>Capybara Chill</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybera-8.jpg" alt="Capybara Love" />
+                <figcaption>Capybara Love</figcaption>
+            </figure>
+            <figure>
+                <img src="../photo/capybara-9.jpg" alt="Sleepy Capybara" />
+                <figcaption>Sleepy Capybara</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- Modal element for enlarging images -->
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span> <!-- Close button -->
+        <img class="modal-content" id="modal-img" /> <!-- Enlarged image -->
+        <div id="modal-caption"></div> <!-- Caption for the modal image -->
+    </div>
+
+    <!-- JavaScript for burger menu -->
+    <script src="../js/main.js"></script>
+    <!-- JavaScript for modal image functionality -->
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

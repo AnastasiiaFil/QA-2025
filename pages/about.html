@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout on mobile -->
+    <title>Capybara-Facts</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+    <header>
+        <div class="header-title">Capybara Haven</div>
+
+        <!-- Desktop Navigation -->
+        <nav>
+            <a href="../index.html">Main page</a>
+            <span>&nbsp;</span>
+            <a href="./contact.html">Contacts</a>
+            <span>&nbsp;</span>
+            <a href="./gallery.html">Gallery</a>
+        </nav>
+
+        <!-- Burger icon for mobile -->
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div class="mobile-nav">
+            <a href="../index.html">Main</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./contact.html">Contacts</a>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-facts">
+
+        <!-- Section: List of facts -->
+        <section>
+            <h2>Top 5 Quick Facts</h2>
+            <ol>
+                <li>
+                    <p>Capybaras are the largest rodents in the world.</p>
+                </li>
+                <li>
+                    <p>They can hold their breath underwater for up to 5 minutes.</p>
+                </li>
+                <li>
+                    <p>Capybaras are highly social and live in groups.</p>
+                </li>
+                <li>
+                    <p>They are excellent swimmers and love water.</p>
+                </li>
+                <li>
+                    <p>Capybaras are herbivores and love munching on grass!</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Article: Lifestyle -->
+        <article>
+            <h2>Capybara Lifestyle</h2>
+            <p>
+                Capybaras are native to South America and are often found near rivers, lakes, and swamps.
+                They communicate with clicks, whistles, and purrs!
+            </p>
+            <figure>
+                <img src="../photo/capybara-10.jpg" alt="Capybara in nature" width="300">
+                <figcaption>Capybara living its best life in the wild.</figcaption>
+            </figure>
+        </article>
+
+        <!-- Section: Diet table -->
+        <section>
+            <h2>Capybara Diet Table</h2>
+            <table border="1" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Frequency</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grass</td>
+                        <td>Daily</td>
+                        <td>Main diet</td>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Occasionally</td>
+                        <td>As a treat</td>
+                    </tr>
+                    <tr>
+                        <td>Vegetables</td>
+                        <td>Regularly</td>
+                        <td>Rich in nutrients</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Fun fact aside -->
+        <aside>
+            <h3>Did you know?</h3>
+            <p>Capybaras are so chill, birds often perch on them!</p>
+        </aside>
+
+        <!-- Section: Audio of capybara sounds -->
+        <section>
+            <h2>Capybara Call</h2>
+            <p>Listen to a real capybara vocalization:</p>
+            <audio controls>
+                <source src="../media/008671104-capybaracusquea80093.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+            <p><small>Audio clip courtesy of
+                    <a href="https://www.pond5.com/search?kw=capybara&media=sfx" target="_blank">Pond5</a></small></p>
+        </section>
+
+        <!-- Section: YouTube video -->
+        <section>
+            <h2>Capybara in Action</h2>
+            <p>Watch a capybara family enjoying a playful day in the wild:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wE6pEsjgdHo"
+                title="A Capybara Family's Day at Play" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <p><small>Video via YouTube (Nat Geo Wild):
+                    <a href="https://youtu.be/wE6pEsjgdHo" target="_blank">Watch on YouTube</a></small></p>
+        </section>
+
+        <!-- Section: Google map -->
+        <section>
+            <h2>Visit the Capybara Homeland</h2>
+            <p>This map shows the Pantanal wetlands in Brazil, one of the capybara's natural habitats:</p>
+            <iframe src="https://www.google.com/maps?q=Pantanal+Matogrossense+National+Park,+Brazil&output=embed"
+                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- Contact form -->
+        <section>
+            <h2>Leave Us a Message</h2>
+            <form action="mailto:info@capybaranursery.org" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><small>&copy; 2022 Capybara Haven. All rights reserved.</small></p>
+    </footer>
+
+    <!-- JS file for burger menu and interactions -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
